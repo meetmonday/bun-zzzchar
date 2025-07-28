@@ -1,4 +1,4 @@
-import index from './frontend/index.html'
+import index from './index.html'
 import userAgents from './backend/getUserAgents'
 import getAgent from './backend/getAgent'
 
