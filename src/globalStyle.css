@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  background: black;
+  color: white;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+input {
+  background: black;
+  border: 2px solid gray;
+  border-radius: 9999px;
+  color: white;
+  padding: 4px;
+}
+
+button.blue {
+  background: #008CFF;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+}
+
+button {
+  color: white;
+  font-weight: 900;
+
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(to bottom, #3C3C3C, #313131) border-box;
+
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA4SURBVHgBrY4xCgAgDMRSEdr/v7adqmNxUaEZj8BFgKRgZqhqnRg80CfJbsibNM/IiMDd/+/6pAVHcQg+tzg+ngAAAABJRU5ErkJggg==);
+  background-size: 4px;
+  border-radius: 50em;
+  border: 2px solid transparent;
+
+  box-shadow: inset 0 0 2px 2px #444444, 0 0 0 2px black;
+  border-radius: 9999px;
+  font-style: italic;
+}
+
+@keyframes yellogreen {
+  from {
+    background-color: #FFDE00;
+  }
+  to {
+    background-color: #C1CA01;
+  }
+}

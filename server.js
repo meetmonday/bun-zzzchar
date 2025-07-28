@@ -1,6 +1,6 @@
-import index from './index.html'
-import userAgents from './backend/getUserAgents'
-import getAgent from './backend/getAgent'
+import index from './src/index.html'
+import userAgents from './src/backend/getUserAgents'
+import getAgent from './src/backend/getAgent'
 
 Bun.serve({
   port: 3330,
@@ -18,7 +18,12 @@ Bun.serve({
       const agentId = req.params.agentId
       const agent = await getAgent(uid, agentId)
       return Response.json(agent)
-    }
+    },
+  },
+  async fetch(req) {
+    const path = new URL(req.url).pathname;
+    const file = Bun.file('.' + path);
+    return new Response(file);
   }
 })
 

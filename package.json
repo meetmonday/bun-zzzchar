@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "bun --hot ./src/server",
-    "build": "bun build ./src/server --compile --outfile ./dist/enka"
+    "start": "bun --hot ./server",
+    "build": "bun build ./server --compile --outfile ./dist/enka"
   },
   "type": "module",
   "devDependencies": {
