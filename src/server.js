@@ -8,18 +8,18 @@ Bun.serve({
     '/': index,
 
     '/api/playerAgents/:uid': async req => {
-      // const uid = req.params.uid;
-      const uid = 1503990001; // for test
+      const uid = req.params.uid;
       const agents = await userAgents(uid)
       return Response.json(agents)
     },
 
     '/api/agent/:uid/:agentId': async req => {
-      // const uid = req.params.uid;
-      const uid = 1503990001; // for test
+      const uid = req.params.uid;
       const agentId = req.params.agentId
       const agent = await getAgent(uid, agentId)
       return Response.json(agent)
     }
   }
 })
+
+console.log('Started @ http://localhost:3330')

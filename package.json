@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "bun --hot ./src/server"
+    "start": "bun --hot ./src/server",
+    "build": "bun build ./src/server --compile --outfile ./dist/enka"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "bun-plugin-svelte": "^0.0.6"
+  }
 }
