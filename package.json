@@ -1,0 +1,9 @@
+{
+  "name": "bun-zzzchar",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "bun --hot ./src/server"
+  },
+  "type": "module"
+}

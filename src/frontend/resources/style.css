@@ -1,0 +1,13 @@
+#agents { 
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 16px;
+}
+
+#build {
+  background: gray;
+  min-height: 80vh;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
