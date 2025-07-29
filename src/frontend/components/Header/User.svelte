@@ -3,7 +3,6 @@
 </script>
 
 <div class='user'>
-  {$appState}
 {#if !$appState}
 <div class='inline'>
   <img src='/assets/avatar.webp' alt='' class='avatar'/>
@@ -15,6 +14,7 @@
 <div class='inline'>
   <img src='/assets/avatar.webp' alt='' class='avatar'/>
   <h1>{$userId}</h1>
+  <button onclick="{ () => appState.set(0) }">Reset</button>
 </div>
 {/if}
 </div>

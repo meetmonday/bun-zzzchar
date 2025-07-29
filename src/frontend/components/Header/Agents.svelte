@@ -17,7 +17,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-  <div class='agent-icon' onclick="{ () => selectedAgent.set(agent.id) }">
+  <div class='agent-icon' onclick="{ () => { selectedAgent.set(agent.id); appState.set(2) } }">
     <img src={agent.hollow_icon_path} alt='mne pohuy sps' />
   </div>
   {/each}

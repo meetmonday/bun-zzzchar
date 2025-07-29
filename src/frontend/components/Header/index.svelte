@@ -2,10 +2,6 @@
     import User from "./User.svelte";
     import Agents from "./Agents.svelte";
     import { appState } from '../../store.svelte.js'
-
-
-    // let userId = $state(1503990001);
-    // let touchedGet = $state(false)
 </script>
 
 <div class='header'>
@@ -17,7 +13,7 @@
 
 <style>
 .header {
-  background: gray;
+  /* background: gray; */
   display: flex;
   gap: 2em;
   padding: 1em;
