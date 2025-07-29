@@ -19,7 +19,7 @@
   display: flex;
   align-items: end;
   width: 100%;
-  height: 25vh;
+  height: 24vh;
   border-radius: 1em 1em 0 0;
 }
 

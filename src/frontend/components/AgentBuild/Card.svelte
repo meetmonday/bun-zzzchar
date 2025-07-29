@@ -1,6 +1,7 @@
 <script>
     import AgentDiscs from "./AgentDiscs.svelte";
     import AgentInfo from "./AgentInfo.svelte";
+    import AgentWeapon from "./AgentWeapon.svelte";
 
   let { agent } = $props()
 </script>
@@ -10,7 +11,7 @@
     <AgentInfo {agent} />
   </div>
   <div class='col2'>
-    blablabla
+    <AgentWeapon weapon={agent.weapon} />
   </div>
   <div class='col3'>
     <AgentDiscs discs={agent.equip} />
@@ -25,21 +26,24 @@
   border-radius: 1em;
   display: grid;
   grid-template-columns: repeat(3, 24vw);
+  box-sizing: border-box;
 }
 
 .col1 {
   width: 24vw;
-  background: #161616;
-  border-radius: 1em;
+  /* background: #161616; */
+  border-radius: 1em 0 0 1em;
 }
 
 .col2 {
   width: 24vw;
-  background: #161616;
+  /* background: #161616; */
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 .col3 {
-  width: 200%;
+  width: 48vw;
   display: flex;
   justify-content: center;
   align-items: center;
