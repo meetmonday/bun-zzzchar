@@ -1,9 +1,10 @@
 <script>
-    let { userId } = $props();
+    import { userId, appState, selectedAgent } from '../../store.svelte.js'
+    
     let agents = $state([]);
     let scrollableBlock;
 
-    fetch(`/api/playerAgents/${userId}`).then(resp => resp.json()).then(json => agents = json);
+    fetch(`/api/playerAgents/${$userId}`).then(resp => resp.json()).then(json => { agents = json; appState.set(2) });
 
     function handleWheel(event) {
         event.preventDefault();
@@ -13,7 +14,10 @@
 
 <div class='scrollable' bind:this={scrollableBlock} onwheel={handleWheel}>
   {#each agents as agent}
-  <div class='agent-icon'>
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+
+  <div class='agent-icon' onclick="{ () => selectedAgent.set(agent.id) }">
     <img src={agent.hollow_icon_path} alt='mne pohuy sps' />
   </div>
   {/each}

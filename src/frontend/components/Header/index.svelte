@@ -1,16 +1,17 @@
 <script>
     import User from "./User.svelte";
     import Agents from "./Agents.svelte";
+    import { appState } from '../../store.svelte.js'
 
-    let userId = $state(1503990001);
-    let touchedGet = $state(false)
 
+    // let userId = $state(1503990001);
+    // let touchedGet = $state(false)
 </script>
 
 <div class='header'>
-  <User bind:userId bind:touchedGet />
-  {#if touchedGet}
-    <Agents {userId} />
+  <User />
+  {#if $appState > 0 }
+    <Agents />
   {/if}
 </div>
 
@@ -18,8 +19,8 @@
 .header {
   background: gray;
   display: flex;
-  gap: 10px;
-  padding: 10px;
+  gap: 2em;
+  padding: 1em;
   align-items: center;
   justify-content: space-between;
 }
