@@ -4,6 +4,9 @@
   let { weapon } = $props();
 </script>
 
+{#if  weapon}
+  
+
 <div class="weapon">
   <div>
     <img src={weapon.icon} alt=''/>
@@ -20,6 +23,9 @@
   </div>
 </div>
 
+{/if}
+
+
 <style>
   .weapon {
     display: flex;
@@ -30,6 +36,8 @@
     border: .01rem solid #000;
     box-shadow: inset .01rem .02rem .01rem rgba(255,255,255,.1);
     border-radius: 2em;
+
+    width: 100%;
   }
 
   img {
@@ -42,5 +50,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.2em;
+    width: 100%;
   }
 </style>

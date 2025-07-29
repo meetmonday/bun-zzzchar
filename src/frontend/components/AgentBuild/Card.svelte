@@ -13,7 +13,7 @@
     <AgentInfo {agent} />
   </div>
   <div class='col2'>
-    <AgentLetters />
+    <AgentLetters skill={agent.skills[4].level}/>
     <AgentSkills skills={agent.skills} />
     <AgentWeapon weapon={agent.weapon} />
   </div>
@@ -25,12 +25,14 @@
 <style>
 .card {
   margin: 10px;
-  /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAASklEQVQImU3MIRYAIQzE0EnLAwP3PyyFWYFZGfEDYFtSRACSAui9vxhjSMqIWGvde6uqqmwnMOfMzIg459hOSc+21oC9N5L+b9sfpfAblcYAM+YAAAAASUVORK5CYII=); */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAASklEQVQImU3MIRYAIQzE0EnLAwP3PyyFWYFZGfEDYFtSRACSAui9vxhjSMqIWGvde6uqqmwnMOfMzIg459hOSc+21oC9N5L+b9sfpfAblcYAM+YAAAAASUVORK5CYII=);
   min-height: 80vh;
   border-radius: 1em;
-  display: grid;
-  grid-template-columns: repeat(3, 24vw);
-  box-sizing: border-box;
+  display: flex;
+  /* grid-template-columns: repeat(3, 24vw); */
+  padding: 0 1em;
+  gap: 2em;
+  align-items: center;
 }
 
 .col1 {
@@ -42,12 +44,14 @@
 .col2 {
   width: 24vw;
   /* background: #161616; */
-  padding: 1em;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .col3 {
-  width: 48vw;
+  width: 44vw;
   display: flex;
   justify-content: center;
   align-items: center;

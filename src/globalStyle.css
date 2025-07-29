@@ -4,8 +4,11 @@
   font-family: "Inter", sans-serif;
 }
 
+
+
 html {
-  background: black;
+  --bg: #f1f1f1;
+  background: var(--bg);
   color: white;
   font-optical-sizing: auto;
   font-style: normal;

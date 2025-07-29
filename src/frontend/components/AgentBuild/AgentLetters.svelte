@@ -1,7 +1,18 @@
 <script>
-  import Letters from "../../../../assets/letters.svelte";
+  let { skill } = $props();
 </script>
 
-<div>
-   <Letters color="#0000ff"/>
+<div class="container">
+    <img src={`/assets/letters/${skill}.png`} alt='' />
 </div>
+
+<style>
+
+  .container {
+    padding: 1em;
+  }
+
+  img {
+    width: calc(24vw - 1em);
+  }
+</style>
