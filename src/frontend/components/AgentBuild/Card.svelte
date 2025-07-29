@@ -1,6 +1,7 @@
 <script>
     import AgentDiscs from "./AgentDiscs.svelte";
     import AgentInfo from "./AgentInfo.svelte";
+    import AgentLetters from "./AgentLetters.svelte";
     import AgentSkills from "./AgentSkills.svelte";
     import AgentWeapon from "./AgentWeapon.svelte";
 
@@ -12,6 +13,7 @@
     <AgentInfo {agent} />
   </div>
   <div class='col2'>
+    <AgentLetters />
     <AgentSkills skills={agent.skills} />
     <AgentWeapon weapon={agent.weapon} />
   </div>

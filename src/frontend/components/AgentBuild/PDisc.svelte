@@ -46,5 +46,8 @@
     width: 9em;
     height: 9em;
     display: block;
+
+    box-shadow: 0 0 0 2px #131313;
+    border-radius: 9999px;
   }
 </style>

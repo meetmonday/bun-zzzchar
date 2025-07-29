@@ -1,28 +1,38 @@
 <script>
-    import { userId, appState, selectedAgent } from '../../store.svelte.js'
-    
-    let agents = $state([]);
-    let scrollableBlock;
+  import { userId, appState, selectedAgent } from "../../store.svelte.js";
 
-    fetch(`/api/playerAgents/${$userId}`).then(resp => resp.json()).then(json => { agents = json; appState.set(2) });
+  let agents = $state([]);
+  let scrollableBlock;
 
-    function handleWheel(event) {
-        event.preventDefault();
-        scrollableBlock.scrollLeft += event.deltaY;
-    }
+  fetch(`/api/playerAgents/${$userId}`)
+    .then((resp) => resp.json())
+    .then((json) => {
+      agents = json;
+      appState.set(2);
+    });
+
+  function handleWheel(event) {
+    event.preventDefault();
+    scrollableBlock.scrollLeft += event.deltaY;
+  }
 </script>
 
-<div class='scrollable' bind:this={scrollableBlock} onwheel={handleWheel}>
+<div class="scrollable" bind:this={scrollableBlock} onwheel={handleWheel}>
   {#each agents as agent}
-  <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-  <div class='agent-icon' onclick="{ () => { selectedAgent.set(agent.id); appState.set(2) } }">
-    <img src={agent.hollow_icon_path} alt='mne pohuy sps' />
-  </div>
+    <div
+      class={["agent-icon", $selectedAgent == agent.id ? "active" : ""]}
+      onclick={() => {
+        selectedAgent.set(agent.id);
+        appState.set(2);
+      }}
+    >
+      <img src={agent.hollow_icon_path} alt="mne pohuy sps" />
+    </div>
   {/each}
 </div>
-
 
 <style>
   .scrollable {
@@ -40,25 +50,25 @@
 
   .agent-icon {
     transform-origin: 50%;
-    transform: skew(-25deg)translate(.05rem);
+    transform: skew(-25deg) translate(0.05rem);
 
     width: 94px;
     height: fit-content;
 
     padding: 4px 0 2px 2px;
-    background-color: #1D1D1D;
+    background-color: #1d1d1d;
   }
 
   img {
     width: inherit;
     height: inherit;
     transform-origin: 50%;
-    transform: scale(1)skew(25deg)translate(-.05rem);
+    transform: scale(1) skew(25deg) translate(-0.05rem);
   }
 
-  .agent-icon:hover {
+  .agent-icon:hover,
+  .agent-icon.active {
     border-radius: 10px;
     animation: 1s infinite yellogreen alternate linear;
-    
   }
 </style>

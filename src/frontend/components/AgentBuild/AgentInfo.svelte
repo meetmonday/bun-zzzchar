@@ -37,10 +37,10 @@ img {
 
 .agent-stats {
   margin-top: 1em;
-  padding: 0.6em;
+  /* padding: 0.6em; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 0.4em;
+  gap: 0.3em;
 }
 </style>
