@@ -13,7 +13,8 @@
 {:else}
 <div class='inline'>
   <img src='/assets/avatar.webp' alt='' class='avatar'/>
-  <h1>{$userId}</h1>
+  <!-- <h1>{$userId}</h1> -->
+   <h3>Username (WIP)</h3>
   <button onclick="{ () => appState.set(0) }">Reset</button>
 </div>
 {/if}

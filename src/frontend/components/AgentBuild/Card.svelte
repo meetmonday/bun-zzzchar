@@ -25,7 +25,7 @@
 <style>
 .card {
   margin: 10px;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAASklEQVQImU3MIRYAIQzE0EnLAwP3PyyFWYFZGfEDYFtSRACSAui9vxhjSMqIWGvde6uqqmwnMOfMzIg459hOSc+21oC9N5L+b9sfpfAblcYAM+YAAAAASUVORK5CYII=);
+  /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAASklEQVQImU3MIRYAIQzE0EnLAwP3PyyFWYFZGfEDYFtSRACSAui9vxhjSMqIWGvde6uqqmwnMOfMzIg459hOSc+21oC9N5L+b9sfpfAblcYAM+YAAAAASUVORK5CYII=); */
   min-height: 80vh;
   border-radius: 1em;
   display: flex;

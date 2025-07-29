@@ -16,9 +16,8 @@
 </script>
 
 <div>
-  {#if $appState != 3}
-    Select Agent
-  {:else}
+  {#if $selectedAgent && $appState == 3}
     <Card {agent} />
+
   {/if}
 </div>

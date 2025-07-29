@@ -8,7 +8,7 @@
     .then((resp) => resp.json())
     .then((json) => {
       agents = json;
-      appState.set(2);
+      // appState.set(2);
     });
 
   function handleWheel(event) {
@@ -26,7 +26,7 @@
       class={["agent-icon", $selectedAgent == agent.id ? "active" : ""]}
       onclick={() => {
         selectedAgent.set(agent.id);
-        appState.set(2);
+        // appState.set(2);
       }}
     >
       <img src={agent.hollow_icon_path} alt="mne pohuy sps" />

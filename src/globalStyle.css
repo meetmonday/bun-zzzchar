@@ -7,7 +7,8 @@
 
 
 html {
-  --bg: #f1f1f1;
+  /* --bg: #00ff00; */
+  --bg: #000;
   background: var(--bg);
   color: white;
   font-optical-sizing: auto;
