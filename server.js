@@ -9,14 +9,18 @@ Bun.serve({
 
     '/api/playerAgents/:uid': async req => {
       const uid = req.params.uid;
-      const agents = await userAgents(uid)
+      const cookies = await req.text();
+
+      const agents = await userAgents(uid, cookies)
       return Response.json(agents)
     },
 
     '/api/agent/:uid/:agentId': async req => {
       const uid = req.params.uid;
       const agentId = req.params.agentId
-      const agent = await getAgent(uid, agentId)
+      const cookies = await req.text();
+
+      const agent = await getAgent(uid, agentId, cookies)
       return Response.json(agent)
     },
   },

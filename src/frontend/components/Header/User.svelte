@@ -3,11 +3,12 @@
 </script>
 
 <div class='user'>
-{#if !$appState}
+{#if $appState <= 0}
 <div class='inline'>
   <img src='/assets/avatar.webp' alt='' class='avatar'/>
   <input placeholder="Enter UID" bind:value={$userId}/>
   <button onclick="{ () => appState.set(1) }">Get</button>
+  <button onclick="{ () => appState.set(-1) }">Cookies</button>
 </div>
   
 {:else}

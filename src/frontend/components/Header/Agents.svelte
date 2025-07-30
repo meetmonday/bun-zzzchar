@@ -4,7 +4,10 @@
   let agents = $state([]);
   let scrollableBlock;
 
-  fetch(`/api/playerAgents/${$userId}`)
+  fetch(`/api/playerAgents/${$userId}`, {
+    method: "POST",
+    body: localStorage.getItem("cookies"),
+  })
     .then((resp) => resp.json())
     .then((json) => {
       agents = json;

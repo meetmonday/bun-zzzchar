@@ -14,3 +14,6 @@ export const agents = writable([]);
 export const selectedAgent = writable();
 
 export const agentStats = writable();
+
+//
+export const HoyoCookies = writable();

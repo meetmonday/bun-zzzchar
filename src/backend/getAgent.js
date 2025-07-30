@@ -1,12 +1,15 @@
-const main = async (uid, agentId) => {
+const main = async (uid, agentId, cookies) => {
   const data = await Bun.fetch(`https://sg-public-api.hoyolab.com/event/game_record_zzz/api/zzz/avatar/info?id_list[]=${agentId}&need_wiki=false&server=prod_gf_eu&role_id=${uid}`, {
     headers: {
-      Cookie: Bun.env.HOYO_COOKIES
+      Cookie: cookies
     }
   })
   const json = await data.json()
-
-  return json.data.avatar_list[0];
+  try {
+    return json.data.avatar_list[0];
+  } catch {
+    return json
+  }
 }
 
 const fake = async (a, b) => {

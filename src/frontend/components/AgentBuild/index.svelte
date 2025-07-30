@@ -7,7 +7,10 @@
   let unsub = selectedAgent.subscribe((id) => {
     if(id == undefined) return;
     console.log(`/api/agent/${$userId}/${id}`);
-    fetch(`/api/agent/${$userId}/${id}`).then(resp => resp.json())
+    fetch(`/api/agent/${$userId}/${id}`, {
+      method: "POST",
+      body: localStorage.getItem('cookies')
+    }).then(resp => resp.json())
       .then(json => { agent = json; appState.set(3) });
   })
 
